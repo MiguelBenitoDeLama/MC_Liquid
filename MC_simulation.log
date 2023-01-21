@@ -1,0 +1,19 @@
+ MC simulation parameters
+
+ Number of atoms:                                  729
+ Density:                          0.69999999999999996     
+ Box length:                        10.136231623652330     
+ Temperature:                       1.2000000000000000     
+ Equilibrium sweeps:                              2000
+ Production sweeps:                                500
+ Maximum MC displacement:          0.20000000000000001     
+ Minimum atom-atom distance:       0.90000000000000002     
+ Potential cutoff distance:         3.0000000000000000     
+ Max g(r) distance:                 4.0000000000000000     
+ Number of g(r) points:                            400
+ Lenard Jones Potential
+ Using a random initial structure of                   729 atoms
+ Using neighbour lists.
+ __________________Results__________________
+ Success ratio:                    0.32768065843621397     
+ Total CPU time                     505.458466    
