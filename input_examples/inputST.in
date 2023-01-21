@@ -1,0 +1,16 @@
+################# Input parameters (Reduced units) ################
+Number of atoms                 =   216
+Density                         =   0.4832
+Temperature                     =   0.1
+Sweeps for equilibration        =   2500
+Sweeps for production           =   2000
+Maximum MC displacement         =   0.15
+Minimum atom-atom distance      =   0.9
+Potential cutoff distance       =   1.80
+Max g(r) distance               =   3.5
+Number of g(r) points           =   140
+Potential type "LJ" or "ST"     =   ST
+Neighbour list method           =   T
+R_skin (only for NL method)     =   0.4
+Initial structure (else random) =   T
+Initial structure file          =   prod_struc.xyz
