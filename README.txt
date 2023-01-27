@@ -1,5 +1,6 @@
-# Title
+# Monte Carlo Liquid Simulation
 
+Program to perform a liquid simulation in order to obtain the radial distribution function using a Monte Carlo approach. The program can use two different potential types, Lennard-Jones and Stillinger potentials. This program is part of the assesment of "Computational Chemistry Programming Project" of the TCCM and it was written following the    
 
 Installation
 ------------
