@@ -1,6 +1,6 @@
-# Monte Carlo Liquid Simulation
+# Monte Carlo Liquid Simulation program
 
-Program to perform a liquid simulation in order to obtain the radial distribution function using a Monte Carlo approach. The program can use two different potential types, Lennard-Jones and Stillinger potentials. This program is part of the assesment of "Computational Chemistry Programming Project" of the TCCM and it was written following the    
+Program to perform a liquid simulation in order to obtain the radial distribution function using a Monte Carlo approach. The program can use two different potential types, Lennard-Jones and Stillinger potentials. This program is part of the assesment of "Computational Chemistry Programming Project" of the TCCM and it was written following the manual provided by Jeremy Harvey.    
 
 Installation
 ------------
@@ -19,8 +19,8 @@ Output
 
 The program generates three output files:
 
-"MC_simulation.log": 
+"MC_simulation.log": Contains the parameters used in the simulation and the results of the simulation (success ratio of the MC simulation and cpu time).
 
 "initial_structure.xyz": Contains the number of particles and initial structure used in the simulation.
 
-"radial.dat":
+"radial.dat": Contains two columns, the distance for which the radial distribution function is calculated and the value of the radial distribution function for each distance.
