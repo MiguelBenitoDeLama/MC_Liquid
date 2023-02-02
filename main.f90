@@ -145,7 +145,7 @@ if ( NL_mode ) then     !WITH NEIGHBOUR LISTS
     allocate(neighbour_mat(n_max,N))
     neighbour_mat = 0   !A matrix that contains the neighbour list of an atom on each column
     do it = 1, iterations
-        if ( it / real(N) .eq. int( it / real( N ) ) ) write(*,*) "Iteration", it / N, "of", iterations / N
+        if ( mod(it,N).eq.0) write(*,*) "Iteration", it / N, "of", iterations / N
         
         !MC_movement moves at random the position of a random atom
         call MC_movement(initial_coor, r_max, L, N, atom, trial_coor)
@@ -209,7 +209,7 @@ if ( NL_mode ) then     !WITH NEIGHBOUR LISTS
 
         !The histogram of g(r) is updated every sweep (1st condition) only 
         !if the iterations are in the production iterations
-        if ( it / real(N) .eq. int( it / real( N ) ) .and. (it .gt. equil_iter)) &
+        if ( (mod(it,N).eq.0 ) .and. (it .gt. equil_iter)) &
         call N_histogram(dist_mat, N,r_points,delta_r,N_accum,N_hist)
     enddo
 
@@ -217,7 +217,7 @@ if ( NL_mode ) then     !WITH NEIGHBOUR LISTS
 else        !WITHOUT NEIGHBOUR LISTS
     write (17,*) "Not using neighbour lists."
     do it = 1, iterations
-        if ( it / real( N ) .eq. int( it / real( N) ) ) write(*,*)"Iteration", it / N, "of", iterations / N
+        if ( mod(it,N).eq.0 ) write(*,*)"Iteration", it / N, "of", iterations / N
         
         !MC_movement moves at random the position of a random atom
         call MC_movement(initial_coor,r_max,L,N,atom,trial_coor)
@@ -248,7 +248,7 @@ else        !WITHOUT NEIGHBOUR LISTS
 
         !The histogram of g(r) is updated every sweep (1st condition) only 
         !if the iterations are in the production iterations
-        if ( it / real( N ) .eq. int( it / real( N ) ) .and. ( it .gt. equil_iter )) &
+        if ( (mod(it,N).eq.0 ) .and. ( it .gt. equil_iter )) &
         call N_histogram(dist_mat, N,r_points,delta_r,N_accum,N_hist)
     enddo
 endif
