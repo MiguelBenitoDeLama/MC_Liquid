@@ -12,5 +12,5 @@ program.exe: $(OBJ)
 	$(FC) $(FFLAGS) -o $@ $(OBJ)
 
 clean:
-	@rm -f *.mod *.o *.xyz *.log program.exe
+	@rm -f *.mod *.o initial_structure.xyz *.log program.exe
 
